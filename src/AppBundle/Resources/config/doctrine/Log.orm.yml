@@ -1,0 +1,23 @@
+AppBundle\Entity\Log:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\LogRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        start:
+            type: string
+            length: 255
+        stop:
+            type: string
+            length: 255
+        total:
+            type: string
+            length: 255
+        person:
+            type: object
+    lifecycleCallbacks: {  }
