@@ -13,6 +13,17 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $logger = $this->get('logger');
+        $logger->info('I just got the logger');
+        $logger->error('An error occurred');
+
+        $logger->critical(
+            'I left the oven on!', array(
+                'cause' => 'in_hurry',
+            )
+        );
+
+
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,

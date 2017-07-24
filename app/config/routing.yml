@@ -1,3 +1,7 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+ac_login:
+    path: /ac/login
+    defaults: { _controller: AppBundle:AC:login }
